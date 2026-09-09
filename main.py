@@ -71,7 +71,7 @@ if (today_month, today_day) in birthdays_dict:
         birthday_letter = file.read()
         birthday_letter_name = birthday_letter.replace("[NAME]", birthday_name)
 
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com",  port=587) as connection:
         birthday_msg = "Subject: Happy Birthday!\n\n" + birthday_letter_name
         birthday_email = birthdays_dict[today_month,today_day]["email"]
         connection.starttls()
