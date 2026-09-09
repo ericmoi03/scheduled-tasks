@@ -39,7 +39,7 @@
 # HINT 3: Remember to login to your email service with email/password. Make sure your security setting is set to allow less secure apps.
 # HINT 4: The message should have the Subject: Happy Birthday then after \n\n The Message Body.
 
-#import os
+import os
 import random
 import smtplib
 import datetime as dt
